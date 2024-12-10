@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color switcher</title>
+    <style>
+       .canvas{
+        /* background-color: beige; */
+        border: 5px solid black;
+        margin: 2px;
+        padding: 2px;
+        display: flex;
+        flex-direction:row ;
+        height: 1000px;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        align-items: center;
+       }
+       .button{
+        height: 170px;
+        width: 170px;
+        border: 2px solid rgb(9, 1, 1);
+        margin:2px;
+        padding:2px;
+       }
+       #grey{
+        background-color: grey;
+       }
+       #blue{
+        background-color: blue;
+       }
+       #green{
+        background-color: green;
+       }
+       #yellow{
+        background-color: yellow;
+       }
+       #pink{
+       background-color: pink;
+       }
+    </style>
+</head>
+<body>
+    
+   <div class="canvas">
+    
+    <span class="button" id="grey"> </span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="green"></span>
+    <span class="button" id="yellow"></span>
+    <span class="button" id="pink"></span>
+
+    <!-- <h2> Try clicking one of the colours above</h2>
+    <span>to change background color of this page</span> -->
+   </div>
+   <!-- <script src="colorswitch.js"></script> -->
+    <script src="colorswitch.js"></script>
+</body>
+</html>
