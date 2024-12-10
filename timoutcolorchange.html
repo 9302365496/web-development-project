@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buttons{
+            display: flex;
+            flex-direction: column;
+             justify-content: center;
+          align-items: center;
+          height: 72rem;
+          width: 145rem;
+            border: 1px solid black;
+        }
+        #stop{
+     width: 10rem;
+    height: 4rem;
+     border: none;
+    border-radius: 0.375rem;
+    background-color: rgb(0, 81, 255);
+    color: white;
+    margin: 52px;
+    transform: all 0.1s;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+        }
+        #start{
+    width: 10rem;
+    height: 4rem;
+     border: none;
+    border-radius: 0.375rem;
+    background-color: rgb(0, 81, 255);
+    color: white;
+    margin: 52px;
+    transform: all 0.1s;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <h1>COLOUR  CHANGING PROJECT</h1>
+        <button id="stop">stop</button>
+        <button id="start">start</button>
+    </div>
+   
+</body>
+<script>
+    //console.log();
+    const randomcolor=function(){
+        const hex="0123456789ABCDEF"
+        let color="#"
+        for (let i = 0; i < 6; i++) {
+            color =color+ hex[Math.floor(Math.random()*16)]    
+        }
+        return color;
+    };
+    let rukja;
+    const startcolor=function(){
+        rukja=setInterval(setit,1000)
+
+        function setit(){
+document.body.style.backgroundColor = randomcolor();
+        }
+    }
+
+    const stopcolor=function(){
+        clearInterval(rukja);
+        rukja=null;
+    }
+   document.querySelector('#start').addEventListener('click',startcolor)
+   document.querySelector('#stop').addEventListener('click',stopcolor)
+    
+    
+</script>
+</html>
